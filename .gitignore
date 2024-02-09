@@ -1,36 +1,43 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
-/.pnp
-.pnp.js
-.yarn/install-state.gz
+application/node_modules
+application/.pnp
+application/.pnp.js
 
 # testing
-/coverage
+application/coverage
 
 # next.js
-/.next/
-/out/
+application/.next/
+application/out/
 
 # production
-/build
+application/build
 
 # misc
-.DS_Store
-*.pem
+application/.DS_Store
+application/*.pem
 
 # debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+application/npm-debug.log*
+application/yarn-debug.log*
+application/yarn-error.log*
+application/.pnpm-debug.log*
 
-# local env files
-.env*.local
+# env files
+# 環境構築時に下記のコメントアウトを外す
+# application/.env*
 
 # vercel
-.vercel
+application/.vercel
 
 # typescript
-*.tsbuildinfo
-next-env.d.ts
+application/*.tsbuildinfo
+# next-env.d.ts
+
+# github
+.github/CODEOWNERS
+
+#ローカル設定ファイル	
+.vscode/settings.json	
