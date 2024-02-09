@@ -2,9 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  images: {
-    unoptimized: true,
-  },
+  output: 'standalone',
+  trailingSlash: true,
 };
 
 export default nextConfig;
