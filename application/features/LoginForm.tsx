@@ -10,7 +10,7 @@ export const LoginForm = () => {
         try {
             await getToken()
             await fetcher<LoginDataType, null>({
-                url: 'users/login',
+                url: 'login',
                 body: data,
             });
             await router.push('/top');
