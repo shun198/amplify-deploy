@@ -50,7 +50,6 @@ export const fetcher = async <ReqBody, ResBody>({
       throw new Error('予期せぬエラーが発生しました。再度お試しください');
     } else {
       const response: Record<string, string> = await res.json();
-      console.log(res.json())
       if (typeof response.msg === 'string') {
         throw new Error(response.msg);
       } else {
@@ -58,3 +57,18 @@ export const fetcher = async <ReqBody, ResBody>({
       }
     }
   };
+
+//ログイン時にgetをすることで、cookieにtokenを格納する
+export const getToken = async (): Promise<Response> => {
+  const res = await fetch(`${BASE_URL}users/get_csrf_token`, {
+    method: 'GET',
+    headers: {
+      'Cache-Control': 'private',
+      ...(process.env['NEXT_PUBLIC_AUTH_NAME']
+        ? { [process.env['NEXT_PUBLIC_AUTH_NAME']]: process.env['NEXT_PUBLIC_AUTH_VALUE'] }
+        : {}),
+    },
+    credentials,
+  });
+  return res;
+};

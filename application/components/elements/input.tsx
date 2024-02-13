@@ -1,17 +1,14 @@
-import { LoginDataType } from "@/types"
 import { HTMLInputTypeAttribute } from "react"
-import { FieldErrors, UseFormRegisterReturn } from "react-hook-form"
+import { UseFormRegisterReturn } from "react-hook-form"
 
 type Props= {
     id:string,
     placeholder: string
     type?: HTMLInputTypeAttribute
     register:UseFormRegisterReturn
-    errors: FieldErrors<LoginDataType>
-
 }
 
-export const Input = ({id,placeholder,type,register,errors}:Props) => {
+export const Input = ({id,placeholder,type,register}:Props) => {
     return(
         <>
         <input
@@ -20,7 +17,6 @@ export const Input = ({id,placeholder,type,register,errors}:Props) => {
           type={type}
           {...register} 
         />
-          {errors.employee_number?.message && <div>{errors.employee_number.message}</div>}
       </>
     )
 }
