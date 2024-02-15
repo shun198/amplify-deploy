@@ -3,7 +3,7 @@ name: Deploy Swagger UI to GitHub Pages
 on:
   push:
     branches:
-      - develop
+      - main
 
 env:
   WORKING_DIRECTORY: application
