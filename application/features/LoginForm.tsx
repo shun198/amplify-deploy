@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { LoginDataType } from '../types';
 import { useForm } from 'react-hook-form';
-import { Input } from '../components/elements/input';
+import { Input } from '@/components/elements/input';
 import { fetcher, getToken } from './fetch';
 
 export const LoginForm = () => {

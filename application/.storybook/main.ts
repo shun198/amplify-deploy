@@ -1,5 +1,6 @@
 import type { StorybookConfig } from '@storybook/nextjs';
 
+// https://storybook.js.org/tutorials/intro-to-storybook/react/en/simple-component/
 const config: StorybookConfig = {
   stories: ['../components/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
   addons: [
