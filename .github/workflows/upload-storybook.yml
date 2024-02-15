@@ -22,9 +22,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version-file: ${{ env.WORKING_DIRECTORY }}/package.json
-          cache: 'npm'
+          # cache: 'npm'
       - name: Install Node Dependencies
-        run: npm install
+        run: npm ci
       - name: Build storybook
         run: npm run build-storybook
       - name: Upload Documents
