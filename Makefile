@@ -14,3 +14,6 @@ build:
 
 test:
 	npm test $(FRONTEND_PATH)
+
+storybook:
+	npm run storybook $(FRONTEND_PATH)
