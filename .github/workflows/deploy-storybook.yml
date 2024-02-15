@@ -29,7 +29,7 @@ jobs:
       - name: Build storybook
         run: npm run build-storybook
       - name: Upload Documents
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           # 絶対パスを指定
           path: ${{ env.WORKING_DIRECTORY }}/storybook-static
@@ -47,4 +47,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
